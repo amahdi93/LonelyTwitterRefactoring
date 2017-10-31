@@ -10,10 +10,13 @@ import java.util.Date;
 
 abstract class LonelyTweet implements Serializable {
     private static final long serialVersionUID = 1L;
-    protected Date tweetDate;
-    protected String tweetBody;
+    //changed from protected to package-private since it is only accessed by classes in this package
+    Date tweetDate;
+    //changed from protected to package-private since it is only accessed by classes in this package
+    String tweetBody;
 
-    public Date getTweetDate() {
+    //changed from public to private, since only this class is accessing this method
+    private Date getTweetDate() {
         return tweetDate;
     }
 
